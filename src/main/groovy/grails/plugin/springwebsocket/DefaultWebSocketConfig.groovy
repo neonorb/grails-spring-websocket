@@ -21,7 +21,7 @@ class DefaultWebSocketConfig extends AbstractWebSocketMessageBrokerConfigurer {
 
 	@Override
 	void registerStompEndpoints(StompEndpointRegistry stompEndpointRegistry) {
-		stompEndpointRegistry.addEndpoint("/stomp").withSockJS()
+		stompEndpointRegistry.addEndpoint("/stomp").setAllowedOrigins("*").withSockJS()
 	}
 
 	@Bean
